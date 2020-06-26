@@ -21,5 +21,7 @@ class Tree:
             self.root.insert(val) ##This implements insert Methode in BiNode class
     def isLocked(self):
         """return a bolean val on wether Node is locked"""
+        ##if all node in its subtree is locked then The node is Locked
     def unLock(self):
         """Unlocks a BiNode"""
+        ##unloced if all the node in its subtree are unlocked
