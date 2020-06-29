@@ -1,16 +1,20 @@
 ##DailyCoding
 class BiNode():
     """define the binary search tree Node"""
-    def __init__(self,val, leftChild, rightChild):
+    def __init__(self, val, leftChild, rightChild):
         self.val = val ##node val
         self.leftChild = leftChild ##left child of node
         self.rightChild = rightChild ##right child of node
-
     def insert(self, newVal):
         """Insert Value to the right or left of a BiNode"""
-        if newVal < self.val: self.leftChild.insert(newVal) ##if less than root insert in left subTree
-        elif newVal > self.val: self.rightChild.insert(newVal)##else insert in right subtree
-
+        if newVal < self.val:
+            if self.leftChild!=None: self.leftChild.insert(newVal) ##if less than root insert in left subTree
+            else: self.leftChild = BiNode(newVal, None, None) #if None object in left subtree creat new BiNode there
+        elif newVal > self.val:
+            if self.rightChild != None: self.rightChild.insert(newVal)##else insert in right subtree
+            else: self.rightChild = BiNode(newVal, None, None)#if None object in right subtree creat new BiNode there
+    def isLocked(self, Node):
+        """return a boolean val whether a node is locked or not"""
 class Tree:
     """Simple Binary search Tree"""
     root = None ##instantiate Root of binary Tree
