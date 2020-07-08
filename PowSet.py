@@ -8,7 +8,7 @@ def PowSet(Set): ##Set is a list object
     size = len(Set)  #initialize length of Set
     for indx in range(len(Set)):
         while True:
-            if indx + 1!= len(Set) and not(Set[indx:indx+2] in powSet): break
+            if not(Set[indx:indx+2] in powSet): break ##indx + 1!= len(Set) and not(
             powSet.append(Set[indx:size]) ##
             size = size-1 ##decrement size
     return powSet
