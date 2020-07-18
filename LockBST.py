@@ -15,6 +15,14 @@ class BiNode():
             else: self.rightChild = BiNode(newVal, None, None)#if None object in right subtree creat new BiNode there
     def isLocked(self, Node):
         """return a boolean val whether a node is locked or not"""
+
+    ##this methode is for TreeExpression Class
+    def eval(self): ###Debug this
+        if type(self.leftChild) != str: ##
+           return eval(str(self.leftChild) + self.val + str(self.rightChild))
+        else:
+            self.leftChild.eval()
+            self.rightChild.eval()
 class Tree:
     """Simple Binary search Tree"""
     root = None ##instantiate Root of binary Tree
