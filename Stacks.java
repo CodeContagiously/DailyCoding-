@@ -17,6 +17,8 @@ public class Stacks
 
     public boolean isFull()
     {//return True if stack is full; false otherwise
+        if(indx==array.length-1) return true;
+        return false;
     }
     public int[] extendStack()
     {//double length of stack
