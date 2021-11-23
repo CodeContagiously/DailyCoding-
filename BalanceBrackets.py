@@ -1,5 +1,5 @@
 def BracketBalance(stringBrackets):
-    """This function computes whether a string of brackets have equal number of open and closed brackets"""
+    """This function computes whether a string of brackets have equal number of open and closed brackets and if they're in the right order"""
     ##Check if all brackets come in pairs. If not, return False
     if "(" in stringBrackets:
         if stringBrackets.count("(") != stringBrackets.count(")"): return False##
